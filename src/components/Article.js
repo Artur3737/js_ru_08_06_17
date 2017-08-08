@@ -13,7 +13,7 @@ class Article extends Component {
     }
 
     render() {
-        const {article, isOpen, toggleOpen} = this.props
+        const {article, isOpen, toggleOpen} = this.props;
         return (
             <div>
                 <h3>{article.title}</h3>
@@ -26,8 +26,8 @@ class Article extends Component {
     }
 
     getBody() {
-        const {article, isOpen} = this.props
-        if (!isOpen) return null
+        const {article, isOpen} = this.props;
+        if (!isOpen) return null;
         return (
             <section>
                {article.text}
