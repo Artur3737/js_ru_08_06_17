@@ -4,8 +4,8 @@
     static propTypes = {
        article: PropTypes.shape({
           id: PropTypes.string.isRequired,
-          title: PropTypes.string.isRequired,
+          title: PropTypes.string,
           text: PropTypes.string.isRequired
        }).isRequired       <-- обязательные комментарии. Лмбо, можно убрать и оставить внутренние "isRequired", в таком случае сам коммент не обязателен но если прийдёт - то у него будут обязательные поля
     }
-4) 
+4)
