@@ -12,6 +12,17 @@ class Article extends Component {
     }).isRequired
   };
 
+  getBody() {
+    const {article, isOpen} = this.props;
+    if (!isOpen) return null;
+    return (
+      <section>
+        {article.text}
+          <CommentList comments = {article.comments}/>
+      </section>
+    )
+  }
+
   render() {
     const {article, isOpen, toggleOpen} = this.props;
     return (
@@ -25,16 +36,6 @@ class Article extends Component {
     )
   }
 
-  getBody() {
-    const {article, isOpen} = this.props;
-    if (!isOpen) return null;
-    return (
-      <section>
-        {article.text}
-          <CommentList comments = {article.comments}/>
-      </section>
-    )
-  }
 }
 
 export default toggleOpen(Article)
